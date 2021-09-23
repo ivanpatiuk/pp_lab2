@@ -3,10 +3,10 @@ package lab2.task3;
 public class Mark {
     private int mark;
 
-    public Mark(){};
+    public Mark(){}
     public Mark(int mark){ this.mark = mark;}
 
-    public void setMark(int mark) {
+    public void setMark(final int mark) {
         if (mark < 0 | mark > 5)
             System.out.println("Error: mark is < 0 or > 5");
         else
@@ -15,7 +15,7 @@ public class Mark {
     public int getMark() { return mark; }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(final Object obj){
         if (obj==null) return false;
         if (obj.getClass()!=this.getClass()) return false;
         Mark tmp = (Mark)obj;
