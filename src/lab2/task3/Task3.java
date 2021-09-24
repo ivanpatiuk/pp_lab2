@@ -7,19 +7,21 @@ public class Task3 {
         s2.setName("Oleh");
         s2.setSurname("Danylo");
 
-        s2.addSubject(SubjectsList.Українська, new Mark(2));
-        s2.addSubject(SubjectsList.Фізкультура, new Mark(3));
-        s1.addSubject(SubjectsList.Англійська, new Mark(5));
-        s1.addSubject(SubjectsList.Фізкультура, new Mark(3));
-        s1.addSubject(SubjectsList.Англійська, new Mark(5));
+        s2.getSubjects().addSubject(Subject.Українська, new Mark(2));
+        s2.getSubjects().addSubject(Subject.Фізкультура, new Mark(3));
+        s1.getSubjects().addSubject(Subject.Англійська, new Mark(5));
+        s1.getSubjects().addSubject(Subject.Фізкультура, new Mark(3));
+        s1.getSubjects().addSubject(Subject.Англійська, new Mark(5));
 
-        s1.addSubject(SubjectsList.Математика, new Mark(4));
+        s1.getSubjects().addSubject(Subject.Математика, new Mark(4));
         System.out.println(s1.toString());
 
-        s1.changeMark(SubjectsList.Англійська, new Mark(2));
-        s1.removeSubject(SubjectsList.Англійська);
+        s1.getSubjects().changeMark(Subject.Англійська, new Mark(2));
+        s1.getSubjects().removeSubject(Subject.Англійська);
 
         System.out.println(s1.toString());
         System.out.println(s2.toString());
+
+        s1.getSubjects().addSubject(Subject.Математика, new Mark(3));
     }
 }

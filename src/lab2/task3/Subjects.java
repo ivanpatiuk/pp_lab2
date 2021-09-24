@@ -3,16 +3,16 @@ package lab2.task3;
 import java.util.*;
 
 public class Subjects {
-    private Map<SubjectsList, Mark> subjects = new HashMap<>();
+    private Map<Subject, Mark> subjects = new HashMap<>();
 
     public Subjects(){}
-    public Subjects(final Map<SubjectsList, Mark> subjects){ this.subjects=subjects; }
+    public Subjects(final Map<Subject, Mark> subjects){ this.subjects=subjects; }
 
-    public Map<SubjectsList, Mark> getSubject() { return subjects; }
-    public void setSubjects(final Map<SubjectsList, Mark> subjects) { this.subjects = subjects; }
-    public void addSubject(final SubjectsList subject, final Mark mark){ subjects.putIfAbsent(subject,mark); }
-    public void removeSubject(final SubjectsList subject) {subjects.remove(subject);}
-    public void changeMark(final SubjectsList subject, final Mark mark){
+    public Map<Subject, Mark> getSubject() { return subjects; }
+    public void setSubjects(final Map<Subject, Mark> subjects) { this.subjects = subjects; }
+    public void addSubject(final Subject subject, final Mark mark){ subjects.putIfAbsent(subject,mark); }
+    public void removeSubject(final Subject subject) {subjects.remove(subject);}
+    public void changeMark(final Subject subject, final Mark mark){
         subjects.replace(subject, this.subjects.get(subject),mark);
     }
     @Override
@@ -27,7 +27,7 @@ public class Subjects {
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
-        for(Map.Entry<SubjectsList,Mark> item : subjects.entrySet()){
+        for(Map.Entry<Subject,Mark> item : subjects.entrySet()){
             str.append(item.getKey());
             str.append(" ");
             str.append(item.getValue().getMark());
