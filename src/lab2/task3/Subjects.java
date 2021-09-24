@@ -6,8 +6,8 @@ public class Subjects {
     private Map<SubjectsList, Mark> subjects = new HashMap<>();
 
     public Subjects(){}
-    public Subjects(final Map<SubjectsList, Mark> subjects){ this.subjects=subjects;
-    }
+    public Subjects(final Map<SubjectsList, Mark> subjects){ this.subjects=subjects; }
+
     public Map<SubjectsList, Mark> getSubject() { return subjects; }
     public void setSubjects(final Map<SubjectsList, Mark> subjects) { this.subjects = subjects; }
     public void addSubject(final SubjectsList subject, final Mark mark){ subjects.putIfAbsent(subject,mark); }
@@ -24,7 +24,6 @@ public class Subjects {
     }
     @Override
     public int hashCode(){ return 1000*subjects.hashCode()+27; }
-
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();

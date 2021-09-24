@@ -1,9 +1,9 @@
 package lab2.task3;
 
 public class Student {
-    private Subjects subjects = new Subjects();
-    private String name;
-    private String surname;
+    protected Subjects subjects = new Subjects();
+    protected String name;
+    protected String surname;
 
     public Student(){}
     public Student(final String name, final String surname){this.name=name;this.surname=surname;}
