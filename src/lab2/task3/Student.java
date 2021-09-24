@@ -12,6 +12,12 @@ public class Student {
         this.surname = surname;
         this.subjects = subjects;
     }
+
+    public void setName(String name) { this.name = name; }
+    public void setSurname(String surname) { this.surname = surname; }
+    public String getName() { return name; }
+    public String getSurname() { return surname; }
+
     public void addSubject(final SubjectsList subject, final Mark mark){ subjects.addSubject(subject, mark);}
     public void removeSubject(final SubjectsList subject){ subjects.removeSubject(subject);}
     public void changeMark(final SubjectsList subject, final Mark mark){ subjects.changeMark(subject, mark); }
