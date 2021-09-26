@@ -68,8 +68,8 @@ public class Task4 {
         printAllStudents(list1);
 
         Map<Integer, Subjects> map = new HashMap<>();
-        map.put(s1.getID(),s1.getSubjects());
-        map.put(s2.getID(),s2.getSubjects());
+        map.put(s1.getId(),s1.getSubjects());
+        map.put(s2.getId(),s2.getSubjects());
         System.out.println();
         System.out.println(map.toString());
     }
