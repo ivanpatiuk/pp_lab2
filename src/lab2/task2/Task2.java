@@ -12,10 +12,15 @@ public class Task2 {
         myStack.push(3);
         myStack.push(13);
         myStack.push(7);
-        System.out.println(myStack.getTopValue()+"\n");
-        System.out.println(myStack.pop()+"\n");
-        while (!myStack.isEmpty()) {
-            System.out.println(myStack.pop());
+        System.out.println(myStack.getTopValue() + "\n");
+        System.out.println(myStack.pop() + "\n");
+        for(Integer value : myStack){
+            System.out.println(value);
+        }
+        myStack.push(20);
+        System.out.println();
+        for(Integer value : myStack){
+            System.out.println(value);
         }
     }
 }
