@@ -18,9 +18,6 @@ public class Student {
     public String getName() { return name; }
     public String getSurname() { return surname; }
 
-//    public void addSubject(final Subject subject, final Mark mark){ subjects.addSubject(subject, mark);}
-//    public void removeSubject(final Subject subject){ subjects.removeSubject(subject);}
-//    public void changeMark(final Subject subject, final Mark mark){ subjects.changeMark(subject, mark); }
     public void setSubjects(final Subjects subjects) { this.subjects = subjects;}
     public Subjects getSubjects() { return subjects; }
 

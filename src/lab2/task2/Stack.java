@@ -48,5 +48,4 @@ public class Stack <T> implements Iterable<T>{
         }
         public void remove() { throw new UnsupportedOperationException(); }
     }
-
 }
